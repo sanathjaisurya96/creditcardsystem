@@ -1,19 +1,20 @@
 package com.PITask.creditcardsystem.validator;
 
 
-import org.hibernate.annotations.Target;
+import java.lang.annotation.Documented;
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
-import java.lang.annotation.Documented;
-import java.lang.annotation.Retention;
-import java.lang.annotation.RetentionPolicy;
 
-@Target( { FIELD, PARAMETER })
-@Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Constraint(validatedBy = CardNumberValidator.class)
-public @interface CardNumberValidation {
+@Target({ ElementType.METHOD, ElementType.FIELD })
+@Retention(RetentionPolicy.RUNTIME)
+public @interface CardNumberConstraint {
     //error message
     public String message() default "Invalid CardNumber";
     //represents group of constraints

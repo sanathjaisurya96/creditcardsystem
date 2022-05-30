@@ -1,5 +1,7 @@
 package com.PITask.creditcardsystem.model;
 
+import com.PITask.creditcardsystem.validator.CardNumberConstraint;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,6 +14,7 @@ public class CreditCardDetails {
     @Column
     private String name;
     @Column
+    @CardNumberConstraint
     private String cardNumber;
     @Column
     private long creditLimit;
