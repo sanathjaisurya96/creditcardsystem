@@ -20,6 +20,7 @@ public class CreditCardDetailsController {
     CreditCardDetailsService creditCardDetailsService;
 
     @GetMapping
+    @ResponseStatus(HttpStatus.OK)
     public List<CreditCardDetails> getAllCreditCardDetails() {
         return creditCardDetailsService.getCreditCardDetails();
     }

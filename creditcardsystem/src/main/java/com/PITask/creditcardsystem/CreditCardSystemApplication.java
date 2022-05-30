@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@ServletComponentScan
+
 @SpringBootApplication(scanBasePackages = "com.PITask.creditcardsystem")
 @EnableJpaRepositories("com.PITask.creditcardsystem.repository")
 @EntityScan("com.PITask.creditcardsystem.model")
